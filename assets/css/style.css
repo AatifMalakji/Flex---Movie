@@ -3,6 +3,10 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
+body{
+    background-color: rgb(165, 164, 164);
+    line-height: 1.5;
+}
 :root{
     --color-black: black;
     --color-white: white;
@@ -53,8 +57,113 @@ box-sizing: border-box;
    color: var(--color-white);
 }
 
-@media all and (min-width: 760px){
+
+/* .......................................header section end...................................... */
+
+
+
+
+.Content{
+    padding: 10px;
+}
+.Content .post{
+    position: relative;
+    margin-bottom: 10px;
+    background-color: var(--color-white);
+}
+.Content .post a{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.post img{
+    height: 250px;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.Content .post h2 {
+    background-color: var(--color-primary);
+    text-align: center;
+    padding: 10px;
+}
+.Content .post p{
+    padding: 10px;
+}
+
+
+
+
+
+/* ....................................................posts section end.................. */
+.section-heading {
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.watchnow figure{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+}
+.watchnow .image img {
+    height: 450px;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+}
+.watchnow figcaption{
+    padding: 10px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+.watchnow h2{
+   margin-bottom: 10px;
+}
+.watchnow p{
+    display: flex;
+    margin-bottom: 10px;
+}
+.watchnow p span{
+    font-weight: 700;
+flex-grow: 1;
+}
+.watchnow a:is(:link, :visited){
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+
+
+
+
+
+
+
+@media all and (min-width: 768px){
     .nav-bar ul{
         flex-direction: row;
+    }
+    .Content .posts{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+    }
+    .post{
+        width: 49%;
+    }
+    .watchnow figure{
+        flex-direction: row;
+    }
+    .watchnow .image{
+        width: 400px;
+        flex: 0 0 400px;
+    }
+    .watchnow .second{
+        order: 1;
     }
 }
