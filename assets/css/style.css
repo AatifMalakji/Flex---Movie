@@ -188,6 +188,52 @@ a.downloadlink {
 
 
 /* .....................................download end................................ */
+.gallery-images{
+    display: flex;
+    flex-direction: column;
+}
+.gallery-img {
+    margin-bottom: 10px;
+    height: 350px;
+
+}
+.gallery-images img{
+height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+.widget {
+    padding: 10px;
+}
+.widget-card {
+    background-color: var(--color-white);
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.widget-card ul{
+    list-style: none;
+}
+
+
+
+
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
 
 @media all and (min-width: 768px){
     .nav-bar ul{
@@ -217,5 +263,41 @@ justify-content: space-between;
     }
     .download-info{
         flex-grow: 1;
+    } 
+    .gallery-images{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .gallery-img{
+        width: 49%;
+    }
+    .widget{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+@media all and (min-width: 1180px){
+    .gallery-img{
+        flex-grow: 1;
+        margin-left: 5px;
+    }
+    .gallery-images .gallery-img:nth-child(4n+1){
+        width: 125px;
+        flex-basis: 125px;
+    }
+    .gallery-images .gallery-img:nth-child(4n+2){
+        width: 450px;
+        flex-basis: 450px;
+    }
+    .gallery-images .gallery-img:nth-child(4n+3){
+        width: 350px;
+        flex-basis: 350px;
+    }
+
+    .Content{
+        display: flex;
+        flex-direction: row;
     }
 }
